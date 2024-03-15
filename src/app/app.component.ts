@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-my-works';
+  isSidenavOpenedParent = false;
+
+  onMenuClick(event: MouseEvent) {
+    // console.log('Menu click from app');
+    this.isSidenavOpenedParent = !this.isSidenavOpenedParent;
+  }
 }
